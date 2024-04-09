@@ -2,7 +2,7 @@
 
 ### Manual Assignments
 * Briefly explain Crypto concepts: blockchain, smart contract, bridge, GAS token, ERC-20 token, wallet and the ChainPort bridge. [Done](manual/crypto_concepts.txt)
-* Transaction tab tests suite. [Not Done](manual/transaction_tab_test_cases.txt)
+* Transaction history page tests suite. [Not Done](manual/transaction_tab_test_cases.txt)
 
 
 ### Automation Assignments

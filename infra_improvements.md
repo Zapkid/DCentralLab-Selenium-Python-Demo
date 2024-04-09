@@ -1,20 +1,26 @@
 Auto Qa Infra (branch: DEVELOP) possible improvements:
 
-BasePage.py should be broken up to two files. UI_Actions.py for functions that perform actions on web elements, and Verifications.py to hold all functions that make assertions on web elements.
-UI_Actions.py & Verifications.py should be moved to a different directory (like extensions).
 
 * Code segments can be refactored to increase readability & understanding of what the code does & to avoid code duplication.
-* Comments that explain what the code does are redundant. Comments should be used to explain why the code is there rather than what it does.
-* Logs like "window had maximize" only adds noise to the logs. Refine logging messages to prioritize relevant information and eliminate unnecessary noise. 
+* Comments that explain what the code does are redundant. Comments should be used to explain why the code is there rather than what it does. **Reduce comments noise**.
+* Logs like "window had maximize" only adds noise to the logs. **Refine logging messages to prioritize relevant information and eliminate unnecessary noise.** 
 * Hooks - Consider **merging multiple global hooks into one**, thus creating one localized place (commonOps.py) for the hook. Enabling a faster & clearer overview of all the actions performed in a hook (like a before_all).
-* Locators - Move all locators from page objects to one file - this avoids duplication. Also, avoid using contains, should be more future-proofed by adding unique data-testid property on the elements.
+* Locators - **Move all locators from page objects to locator files** - this avoids duplication across multiple test files. Also, avoid using contains, should be more future-proofed by adding unique data-testid property on the elements.
 * Scheduled test runs.
 * Run tests on command & by groupings.
 * Run tests in parallel if possible using multiprocessing or distributed testing frameworks like pytest-xdist, to reduce test execution time.
-* Allure reports - Detailed test results reports.
+* **Allure Reports** - Detailed test results reports.
 * Containerization: Dockerize the automation framework and dependencies to create lightweight, portable containers for easier setup, deployment, and scalability across different environments.
 * Support Mobile testing
 * Optional: Video recordings of failed tests
+
+---
+
+**BasePage.py should be broken up to two files. UI_Actions.py for functions that perform actions on web elements, and Verifications.py to hold all functions that make assertions on web elements.**
+
+UI_Actions.py & Verifications.py should be moved to a different directory (like extensions).
+
+**Complex flows involving more than one page should be saved as a workflow function in a workflows.py file.**
 
 ---
 
@@ -39,8 +45,7 @@ HTTPStatusCodes.py - can use `from http import HTTPStatus` or `import http.clien
 ---
 Don't use contains in locators:
 
-GOT_IT_BUTTON = (By.XPATH, "//*[contains(text(),'Got it')]")
-
+GOT_IT_BUTTON = (By.XPATH, "//*[contains(text(),'Got it')]")\
 CONFIRM_BUTTON = (By.XPATH, "//span[contains(text(),'Confirm')]")
 
 ---
