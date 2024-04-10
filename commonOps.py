@@ -9,6 +9,7 @@ action = ActionChains(driver)
 
 def takeScreenshot(pathname: str):
     try:
+        # Giving time for any quick animations to complete
         time.sleep(1)
         driver.save_screenshot(pathname)
     except Exception as e:

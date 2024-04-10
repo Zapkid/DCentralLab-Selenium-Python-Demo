@@ -7,11 +7,11 @@ def test_hord():
     # Should be in before hook
     driver.get("https://staging-app.hord.fi")
 
-    HordPage.verifySidebarToggled()         
+    HordPage.verifySidebarToggledState()         
         
     HordPage.toggleSidebar()
-    HordPage.verifySidebarToggled(True)
+    HordPage.verifySidebarToggledState(True)
                
     HordPage.toggleSidebar()
-    HordPage.verifySidebarToggled(True)
+    HordPage.verifySidebarToggledState(True)
     

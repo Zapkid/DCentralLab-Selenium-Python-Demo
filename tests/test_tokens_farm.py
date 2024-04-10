@@ -11,7 +11,10 @@ def test_tokens_farm():
     
     # Should be in before_all hook in commonOps
     driver.get("https://staging.tokensfarm.com/create#/staking")
-    time.sleep(2)
+
+    # Explicitly waiting for page to load the DOM
+    # Not good practice, should be replaced by waiting for full page load
+    time.sleep(5)
     
     # # Tried to solve test flakiness by closing the connect wallet modal that not always appears
     # if len(driver.find_elements(By.CSS_SELECTOR, tokens_farm_locators.wallet_connect_close_modal)) > 0:

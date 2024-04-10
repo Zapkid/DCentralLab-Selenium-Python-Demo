@@ -6,7 +6,7 @@ from extensions.verifications import Verifications
 from locators.hord_locators import hord_locators
 
 class HordPage:
-    def verifySidebarToggled(captureScreenshot = False):
+    def verifySidebarToggledState(captureScreenshot = False):
         sidebar = HordPage.getSidebar() 
         if (sidebar.get_attribute('class').find('sidebar-expanded') != -1):
             HordPage.verifySidebarExpanded()
