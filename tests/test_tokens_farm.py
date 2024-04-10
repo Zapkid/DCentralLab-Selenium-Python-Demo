@@ -1,3 +1,4 @@
+import time
 from commonOps import driver, takeScreenshot
 from selenium.webdriver.remote.webelement import WebElement
 
@@ -10,10 +11,9 @@ def test_tokens_farm():
     
     # Should be in before_all hook in commonOps
     driver.get("https://staging.tokensfarm.com/create#/staking")
-    driver.maximize_window()
+    time.sleep(2)
     
     # # Tried to solve test flakiness by closing the connect wallet modal that not always appears
-    
     # if len(driver.find_elements(By.CSS_SELECTOR, tokens_farm_locators.wallet_connect_close_modal)) > 0:
     #     wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, tokens_farm_locators.wallet_connect_buttons)))
     #     close_connect_wallet_modal: WebElement = UI_Actions.getVisibleElement(tokens_farm_locators.wallet_connect_close_modal)
@@ -29,9 +29,3 @@ def test_tokens_farm():
     Verifications.verifyElementAttribute(input, 'aria-expanded', 'true')
     
     takeScreenshot(f"assets/screenshots/token_chain_dropdown.png")
-
-    
-    # Should be in after_all hook in commonOps
-    driver.quit()
-
-
