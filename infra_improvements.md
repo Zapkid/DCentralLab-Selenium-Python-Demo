@@ -26,7 +26,7 @@ UI_Actions.py & Verifications.py should be moved to a different directory (like 
 
 In Screenshot.py:
 
-def get_current_datetime - function should be moved to general utils in commonOps.py to be reused across classes, add parameter for datetime format if needed.
+def get_current_datetime - function should be moved to general utils in commonOps.py to be reused globally, add parameter for datetime format if needed.
 
 ---
 
@@ -43,12 +43,14 @@ Also, this can be saved as global variable in the before_all hook, instead of be
 HTTPStatusCodes.py - can use `from http import HTTPStatus` or `import http.client` instead of manually entering status codes.
 
 ---
-Don't use contains in locators:
+
+Refrain from using `contains` in locators:
 
 GOT_IT_BUTTON = (By.XPATH, "//*[contains(text(),'Got it')]")\
 CONFIRM_BUTTON = (By.XPATH, "//span[contains(text(),'Confirm')]")
 
 ---
+
 Instead of passing the text & locator separately, consider passing just 1 object containing these attributes & destruct it:
 
 def is_confirm_button_exist(self):

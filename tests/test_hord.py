@@ -1,17 +1,18 @@
-from commonOps import driver
+import allure
+from fixtures.hordSetup import hord_setup
 from pages.hordPage import HordPage
 
-
-def test_hord():
-    
-    # Should be in before hook
-    driver.get("https://staging-app.hord.fi")
+@allure.title("Verify Hord sidebar expands & collapses")
+@allure.description("Should toggle sidebar & verify sidebar toggled states")
+@allure.link("https://staging-app.hord.fi", name="TokensFarm Website")
+def test_hord(hord_setup):
 
     HordPage.verifySidebarToggledState()         
         
     HordPage.toggleSidebar()
     HordPage.verifySidebarToggledState(True)
-               
+      
+    # Toggling the sidebar a 2nd time to verify both expanded & collapsed states
     HordPage.toggleSidebar()
     HordPage.verifySidebarToggledState(True)
     

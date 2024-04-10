@@ -1,20 +1,17 @@
-import time
-from commonOps import driver, takeScreenshot
+import allure
+from fixtures.tokensFarmSetup import tokens_farm_setup
+from base import screenshotsFolder
+from commonOps import takeScreenshot
 from selenium.webdriver.remote.webelement import WebElement
 
 from extensions.ui_actions import UI_Actions
 from extensions.verifications import Verifications
 from locators.tokens_farm_locators import tokens_farm_locators
 
-
-def test_tokens_farm():
-    
-    # Should be in before_all hook in commonOps
-    driver.get("https://staging.tokensfarm.com/create#/staking")
-
-    # Explicitly waiting for page to load the DOM
-    # Not good practice, should be replaced by waiting for full page load
-    time.sleep(5)
+@allure.title("Verify TokensFarm dropdown")
+@allure.description("Should expand token chain dropdown")
+@allure.link("https://staging.tokensfarm.com/create#/staking", name="TokensFarm Website")
+def test_tokens_farm(tokens_farm_setup):
     
     # # Tried to solve test flakiness by closing the connect wallet modal that not always appears
     # if len(driver.find_elements(By.CSS_SELECTOR, tokens_farm_locators.wallet_connect_close_modal)) > 0:
@@ -31,4 +28,4 @@ def test_tokens_farm():
     input: WebElement = UI_Actions.getElement(tokens_farm_locators.expanded_dropdown)
     Verifications.verifyElementAttribute(input, 'aria-expanded', 'true')
     
-    takeScreenshot(f"assets/screenshots/token_chain_dropdown.png")
+    takeScreenshot(screenshotsFolder, "token_chain_dropdown.png")

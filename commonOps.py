@@ -1,16 +1,15 @@
 import time
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver import ActionChains
+import allure
+from base import driver
+from pathlib import Path
 
-driver = webdriver.Chrome()
-wait = WebDriverWait(driver, 10)
-action = ActionChains(driver)
-
-def takeScreenshot(pathname: str):
+@allure.step("Take Screenshot")
+def takeScreenshot(path: str, name: str):
+    pathname = path + '/' + name
     try:
         # Giving time for any quick animations to complete
         time.sleep(1)
         driver.save_screenshot(pathname)
+        allure.attach.file(pathname, name, attachment_type=allure.attachment_type.PNG)
     except Exception as e:
         print(e)

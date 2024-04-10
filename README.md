@@ -12,4 +12,5 @@
 
 
 #### Run automation tests
-* run `python -m pytest` in the terminal
+* run `python -m pytest --alluredir allure-results` in the terminal to run the tests & generate allure reports.
+* run `allure serve allure-results` in the terminal to open the report in a web browser.
