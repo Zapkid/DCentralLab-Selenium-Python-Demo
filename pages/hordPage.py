@@ -1,6 +1,6 @@
 import allure
-from base import screenshotsFolder
-from commonOps import takeScreenshot
+from utils.base import screenshotsFolder
+from utils.screenshot import takeScreenshot
 from selenium.webdriver.remote.webelement import WebElement
 
 from extensions.ui_actions import UI_Actions

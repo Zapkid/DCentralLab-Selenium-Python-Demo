@@ -1,6 +1,6 @@
 import allure
 import pytest
-from base import driver
+from utils.base import driver
 
 @pytest.fixture()
 @allure.title("Setup for the Hord app test")
