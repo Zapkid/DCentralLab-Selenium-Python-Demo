@@ -7,16 +7,16 @@
 ### Ensure that the Transaction History tab displays correctly upon opening the app.
 
 * Assert: Should display all page elements including expected values & style for:
-    1. Title.
-    2. Account link.
-    3. Tabs (Current Balances, Transaction history & My Referrals)
-    4. Tokens ported.
-    5. Chains.
-    6. Total ports.
-    7. Ports in last 30 days.
-    8. Ports volume.
-    9. PortX details & balance.
-    10. Transaction history table with list of recent transactions & Download CSV button.
+    - Title.
+    - Account link.
+    - Tabs (Current Balances, Transaction history & My Referrals)
+    - Tokens ported.
+    - Chains.
+    - Total ports.
+    - Ports in last 30 days.
+    - Ports volume.
+    - PortX details & balance.
+    - Transaction history table with list of recent transactions & Download CSV button.
 
 
 ## Test Case: Verify Interaction with Port balance dropdown
