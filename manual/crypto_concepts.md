@@ -26,18 +26,18 @@ The Ultimate Next-Generation Cross-Chain Bridge Powered by PORTX Token, the only
 ---
 
 #### Full disclosure
----
-The assignment took about 2 minutes with the use of ChatGPT + 5 more minutes to verify correctness using google search + 5 more minutes to gather the right data about the ChainPort bridge.
+
+This task took about 2 minutes with the use of ChatGPT + 5 more minutes to verify correctness using google search + 5 more minutes to gather the right data about the ChainPort bridge.
 ChatGPT did a fine job on shortly explaining the ChainPort bridge, but lacked key technical details.
 
 ---
 ---
 
 
-# Super simple TLDR for non technical personal:
+# Super simple TLDR Crypto Concepts:
 
 * **Blockchain**: It's like a special book where we write down everything we buy or sell, but instead of one person having the book, everyone has a copy. This way, nobody can change what's written, and we can all make sure it's fair.
-* Smart contract: Picture a magical vending machine. You put in your request and the exact coins it asks for, and the machine automatically gives you the item. Like making sure people get what they agreed to without needing someone else to help.
+* **Smart contract**: Picture a magical vending machine. You put in your request and the exact coins it asks for, and the machine automatically gives you the item. Like making sure people get what they agreed to without needing someone else to help.
 * **Bridge**: Think of a bridge like a magical tunnel that helps two different lands talk to each other. This way, people and things can travel between them easily and safely.
 * **GAS token**: It's like a special coin you need to make sure your machine (smart contract) can do its job.
 * **ERC-20 token**: These are special coins that follow certain rules so they can work on a special computer island called Ethereum.

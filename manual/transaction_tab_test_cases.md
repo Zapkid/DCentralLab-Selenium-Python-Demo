@@ -6,14 +6,17 @@
 
 ### Ensure that the Transaction History tab displays correctly upon opening the app.
 
-* Assert: Should display all page elements including expected values for:
-    1. Tokens ported.
-    2. Chains.
-    3. Total ports.
-    4. Ports in last 30 days.
-    5. Ports volume.
-    6. PortX details & balance.
-    7. Transaction history table with list of recent transactions.
+* Assert: Should display all page elements including expected values & style for:
+    1. Title.
+    2. Account link.
+    3. Tabs (Current Balances, Transaction history & My Referrals)
+    4. Tokens ported.
+    5. Chains.
+    6. Total ports.
+    7. Ports in last 30 days.
+    8. Ports volume.
+    9. PortX details & balance.
+    10. Transaction history table with list of recent transactions & Download CSV button.
 
 
 ## Test Case: Verify Interaction with Port balance dropdown
@@ -82,10 +85,17 @@
 * Assert: A message or placeholder should inform the user to connect a wallet / that there are no transactions to display.
 
 
+## Test Case: Verify navigation to account page 
+
+### Check navigation to account page
+
+* Act: Click on the account link button.
+* Assert: Should navigate to the account page.
+
+
 ## Test Case: Verify navigation to other tabs 
 
 ### Check navigation to Current Balances & My Referrals tabs.
 
 * Act: Click on Current Balances / My Referrals tab.
 * Assert: Should display the Current Balances / My Referrals tabs UI.
-
