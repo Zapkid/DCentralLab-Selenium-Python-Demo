@@ -4,7 +4,7 @@ from pages.hordPage import HordPage
 
 @allure.title("Verify Hord sidebar expands & collapses")
 @allure.description("Should toggle sidebar & verify sidebar toggled states")
-@allure.link("https://staging-app.hord.fi", name="TokensFarm Website")
+@allure.link("https://staging-app.hord.fi", name="Hord app Website")
 def test_hord(hord_setup):
 
     HordPage.verifySidebarToggledState()         
