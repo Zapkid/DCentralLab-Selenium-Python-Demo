@@ -28,7 +28,7 @@ This project demonstrates my ability to build an automation testing infrastructu
 
 ## Manual Assignments
 * Briefly explain Crypto concepts: blockchain, smart contract, bridge, GAS token, ERC-20 token, wallet and the [ChainPort bridge](https://www.chainport.io). [Done](manual/crypto_concepts.md).
-* Transaction history page tests suite. [Not Done](manual/transaction_tab_test_cases.md).
+* Transaction history page tests suite. [Done](manual/transaction_tab_test_cases.md).
 * Bonus task - Porting fees protocol test cases. [Not Done].
 
 
