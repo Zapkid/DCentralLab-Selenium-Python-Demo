@@ -27,8 +27,8 @@ This project demonstrates my ability to build an automation testing infrastructu
 
 
 ## Manual Assignments
-* Briefly explain Crypto concepts: blockchain, smart contract, bridge, GAS token, ERC-20 token, wallet and the ChainPort bridge. [Done](manual/crypto_concepts.txt).
-* Transaction history page tests suite. [Not Done](manual/transaction_tab_test_cases.txt).
+* Briefly explain Crypto concepts: blockchain, smart contract, bridge, GAS token, ERC-20 token, wallet and the [ChainPort bridge](https://www.chainport.io). [Done](manual/crypto_concepts.md).
+* Transaction history page tests suite. [Not Done](manual/transaction_tab_test_cases.md).
 * Bonus task - Porting fees protocol test cases. [Not Done].
 
 
@@ -40,7 +40,7 @@ XPATH Selector - `//*[@id='farm-chain']`
 
 * QA automation infrastructure project improvements - [Done](infra_improvements.md).
 
-* Hord app verify Sidebar. [Done](tests/test_tokens_farm.py).
+* Hord app verify Sidebar. [Done](tests/test_hord.py).
 ![allure_report_hord_sidebar_test](assets/allure_reports/allure_report_hord_sidebar_test.png "allure_report_hord_sidebar_test")
 
 
