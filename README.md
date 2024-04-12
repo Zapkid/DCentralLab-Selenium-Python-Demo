@@ -2,7 +2,7 @@
 
 # DCentralLab-Selenium-Python-Demo
 
-This project demonstrates my ability to build an automation testing infrastructure POC with tests using Page Object design pattern, in Python.
+This project is a demonstration of an automation testing infrastructure Proof of Concept (POC) using the Page Object Model design pattern in Python.
 
 ![DCentralLab Products](assets/assignment/DCentralLab_products.png)
 
@@ -10,37 +10,47 @@ This project demonstrates my ability to build an automation testing infrastructu
 
 
 ## Technology stack
-* Selenium
-* Python
-* PyTest
-* Allure Reports
+* Selenium: Web browser automation tool.
+* Python: Programming language used for scripting.
+* PyTest: Testing framework for Python.
+* Allure Reports: Reporting tool for test results visualization.
 
 
 ## Project structure
-* UI actions & verifications are located in `extensions` folder.
-* Fixtures used to initialize test functions.
-* Locators to store selectors for UI elements.
-* Pages representing web pages under test holding page specific functionality.
-* Tests folder containing test logic.
-* Utils - `base.py` to hold global variables & other utils for common operations across tests like `screenshot.py`.
-* `conftest.py` - default configuration for pytest & global hooks.
+* `extensions`: Contains UI actions and verifications.
+* `fixtures`: Initializes test functions.
+* `locators`: Stores selectors for UI elements.
+* `pages`: Represents web pages under test, holding page-specific functionality.
+* `tests`: Contains test logic.
+* `utils`: Includes `base.py` for global variables and common utilities like `screenshot.py`.
+* `conftest.py`: Default configuration for pytest and global hooks.
+
+
 
 
 ## Manual Assignments
-* Briefly explain Crypto concepts: blockchain, smart contract, bridge, GAS token, ERC-20 token, wallet and the [ChainPort bridge](https://www.chainport.io). [Done](manual/crypto_concepts.md).
-* Transaction history page tests suite. [Done](manual/transaction_tab_test_cases.md).
-* Bonus task - Porting fees protocol test cases. [Not Done].
+* [Brief explanation of Crypto concepts](manual/crypto_concepts.md) -
+    - Blockchain
+    - Smart contract
+    - Bridge, 
+    - GAS token, 
+    - ERC-20 token, 
+    - Wallet 
+    - ChainPort bridge
+
+* [Transaction history page tests suite](manual/transaction_tab_test_cases.md)
+* [Porting fees protocols functional test cases](manual/porting_fees_protocols_test_cases.md) (Bonus task)
 
 
 ## Automation Assignments
-* TokensFarm app Element Locator - [Done](tests/test_tokens_farm.py).\
+* [TokensFarm app Element Locator](tests/test_tokens_farm.py)\
 CSS Selector - `#farm-chain` or `[id='farm-chain']`\
 XPATH Selector - `//*[@id='farm-chain']`
 ![allure_report_tokens_farm_test](assets/allure_reports/allure_report_tokens_farm_test.png "allure_report_tokens_farm_test")
 
-* QA automation infrastructure project improvements - [Done](infra_improvements.md).
+* [QA automation infrastructure project improvements](infra_improvements.md)
 
-* Hord app verify Sidebar. [Done](tests/test_hord.py).
+* [Hord app verify Sidebar](tests/test_hord.py)
 ![allure_report_hord_sidebar_test](assets/allure_reports/allure_report_hord_sidebar_test.png "allure_report_hord_sidebar_test")
 
 
@@ -49,4 +59,4 @@ XPATH Selector - `//*[@id='farm-chain']`
 * run `allure serve allure-results` in the terminal to open the report in a web browser.
 
 ## Estimated time worked on the project (hrs): 
-~ 12 hrs
+~ 14 hrs
