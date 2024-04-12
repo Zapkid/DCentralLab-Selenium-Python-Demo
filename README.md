@@ -6,9 +6,6 @@ This project is a demonstration of an automation testing infrastructure Proof of
 
 ![DCentralLab Products](assets/assignment/DCentralLab_products.png)
 
-[Full assignment document found here.](assets/assignment/DCentraLab%20-%20QA%20&%20Support%20Engineer%20-%20Home%20Assignments.md)
-
-
 ## Technology stack
 * Selenium: Web browser automation tool.
 * Python: Programming language used for scripting.
@@ -26,6 +23,7 @@ This project is a demonstration of an automation testing infrastructure Proof of
 * `conftest.py`: Default configuration for pytest and global hooks.
 
 
+### [Full assignment document](assets/assignment/DCentraLab%20-%20QA%20&%20Support%20Engineer%20-%20Home%20Assignments.md)
 
 
 ## Manual Assignments
@@ -58,5 +56,5 @@ XPATH Selector - `//*[@id='farm-chain']`
 * run `python -m pytest --alluredir allure-results` in the terminal to run the tests & generate allure reports.
 * run `allure serve allure-results` in the terminal to open the report in a web browser.
 
-## Estimated time worked on the project (hrs): 
+## Estimated time worked on the project
 ~ 14 hrs
