@@ -14,35 +14,30 @@ class HordPage:
     
     @allure.step("Verify Sidebar Toggled State")
     def verifySidebarToggledState(captureScreenshot = False):
-        sidebar = HordPage.getSidebar() 
-        if (sidebar.get_attribute('class').find(sidebarExpandedClass) != -1):
+        sidebarExpanded = HordPage.getSidebar().get_attribute('class').find(sidebarExpandedClass) != -1
+        if sidebarExpanded:
             HordPage.verifySidebarExpanded()
             if captureScreenshot:
                 takeScreenshot(screenshotsFolder, "hord_sidebar_expanded.png")
         else:
             collapsedSidebarElements = UI_Actions.getElements(hord_locators.collapsed_sidebar_items)
-            for element in collapsedSidebarElements:
-                Verifications.verifyElementAttributeDoesNotContain(element, 'class', sidebarExpandedClass)
-                
+            Verifications.verifyElementsDoNotHaveAttribute(collapsedSidebarElements, sidebarExpandedClass)
             if captureScreenshot:
                 takeScreenshot(screenshotsFolder, "hord_sidebar_collapsed.png")
 
     @allure.step("Toggle Sidebar")
     def toggleSidebar():
-        sidebar_toggler = HordPage.getSidebarToggle()
-        UI_Actions.hoverAndClick(sidebar_toggler)
+        UI_Actions.hoverAndClick(HordPage.getSidebarToggle())
             
     @allure.step("Get Sidebar")
-    def getSidebar():
-        sidebar: WebElement = UI_Actions.getElement(hord_locators.sidebar)
-        return sidebar
+    def getSidebar() -> WebElement:
+        return UI_Actions.getElement(hord_locators.sidebar)
 
     @allure.step("Get Sidebar Toggle")
-    def getSidebarToggle():
-        sidebar_toggler: WebElement = UI_Actions.getElement(hord_locators.sidebar_toggler)
-        return sidebar_toggler
+    def getSidebarToggle() -> WebElement:
+        return UI_Actions.getElement(hord_locators.sidebar_toggler)
 
-    @allure.step("Verify Sidebar Toggled State")
+    @allure.step("Verify Sidebar Expanded")
     def verifySidebarExpanded():
         expanded_sidebar_items: WebElement = UI_Actions.getElements(hord_locators.expanded_sidebar_items)
         Verifications.verifyIntAbove(len(expanded_sidebar_items), 0)

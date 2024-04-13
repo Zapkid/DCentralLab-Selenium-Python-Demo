@@ -27,7 +27,7 @@ This project is a demonstration of an automation testing infrastructure Proof of
 
 
 ## Manual Assignments
-* [Brief explanation of Crypto concepts](manual/crypto_concepts.md)
+* Brief explanation of Crypto concepts:
     - [Blockchain](https://github.com/Zapkid/DCentralLab-Selenium-Python-Demo/blob/main/manual/crypto_concepts.md#blockchain)
     - [Smart contract](https://github.com/Zapkid/DCentralLab-Selenium-Python-Demo/blob/main/manual/crypto_concepts.md#smart-contract)
     - [Bridge](https://github.com/Zapkid/DCentralLab-Selenium-Python-Demo/blob/main/manual/crypto_concepts.md#bridge)

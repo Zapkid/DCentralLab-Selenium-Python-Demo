@@ -16,4 +16,10 @@ class Verifications:
 
     @allure.step("Verify Int Above")
     def verifyIntAbove(actual: int, expected: int):
-        assert actual > expected  
+        assert actual > expected 
+        
+    @allure.step("Verify Elements Do Not Have Attribute")
+    def verifyElementsDoNotHaveAttribute(elements, attribute: str, property: str = 'class'):
+        for element in elements:
+            Verifications.verifyElementAttributeDoesNotContain(element, property, attribute) 
+    

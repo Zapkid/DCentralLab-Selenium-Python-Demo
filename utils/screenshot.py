@@ -2,6 +2,8 @@ import time
 import allure
 from utils.base import driver
 
+captureScreenshot = True
+
 @allure.step("Take Screenshot")
 def takeScreenshot(path: str, name: str):
     pathname = path + '/' + name
