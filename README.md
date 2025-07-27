@@ -1,4 +1,4 @@
-![DCentralLab](assets/assignment/DCentralLab_logo.png)
+![DcentralLab](assets/assignment/DCentralLab_logo.png)
 
 # DCentralLab-Selenium-Python-Demo
 
